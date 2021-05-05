@@ -1,0 +1,194 @@
+:root {
+  --main-color: "#1e2029";
+  --main-hover-color: "#252833";
+  --plyr-color-main: #42e3d0 !important;
+}
+
+/* APPBAR ELEMENTS */
+
+.MuiListItem-root,
+.MuiListItemIcon-root,
+.MuiButtonBase-root {
+  color: #9b9dab !important;
+}
+
+.MuiListItem-root:hover,
+.MuiButtonBase-root:hover {
+  color: #fff !important;
+}
+
+/* CHANGE COLOR OF ACTIVE NAVLINK  */
+
+.navbaractivelink .MuiButtonBase-root {
+  border-right: 1px solid #42e3d0;
+  background: #181923;
+}
+
+.navbaractivelink .MuiListItemIcon-root {
+  color: #42e3d0 !important;
+}
+
+/* STORY FRAGMAN */
+
+.story {
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #42e3d0;
+  transition: 125ms ease-in-out;
+  cursor: pointer;
+}
+
+.storyvisited {
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #bababa;
+  transition: 125ms ease-in-out;
+  cursor: pointer;
+}
+
+.story:active,
+.storyvisited:active {
+  transform: scale(0.95);
+  outline: none;
+}
+.story img,
+.storyvisited img {
+  width: 103px;
+  height: 103px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.alignstory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  height: 0.4rem;
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-track:horizontal {
+  background: #111216;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: #242323;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background: #9b9dab;
+}
+
+::-webkit-scrollbar-track:vertical {
+  background: #111216;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: #242323;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+  background: #9b9dab;
+}
+
+/* EDITORS PICK CARD */
+
+.editorspick {
+  background: #1e2029;
+  padding: 5px;
+  border-radius: 5px;
+  line-height: 0;
+  cursor: pointer;
+  transition: 100ms ease-in-out;
+}
+
+.editorspick:hover {
+  background: #252833;
+}
+
+.editorspick img {
+  max-width: 100%;
+}
+
+/* REMOVE PAPER MAX-WIDTH */
+
+.MuiDialog-container > .MuiDialog-paperWidthSm {
+  max-width: 90vw;
+}
+
+.MuiDialog-container > .MuiDialog-paper {
+  margin: 0;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+  .story,
+  .storyvisited {
+    width: 80px;
+    height: 80px;
+  }
+  .story img,
+  .storyvisited img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .story,
+  .storyvisited {
+    min-width: 80px;
+    min-height: 80px;
+  }
+  .story img,
+  .storyvisited img {
+    min-width: 73px;
+    min-height: 73px;
+  }
+  #sliderwrap {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .swiper-wrapper {
+    gap: 3rem;
+  }
+  .MuiSkeleton-circle {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  #episodenames {
+    font-size: 1rem !important;
+    white-space: nowrap;
+    overflow-wrap: inherit;
+  }
+}
+
+/* TABLE OVERFLOW */
+
+@media screen and (max-width: 600px) {
+  #table {
+    display: block;
+    overflow-x: auto;
+  }
+  #storymobile {
+    width: 80vw !important;
+  }
+}
