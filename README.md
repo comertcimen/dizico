@@ -1,6 +1,6 @@
 # Dizico
 
-Dizico is a React TV Show streaming project `(Ongoing)`
+Dizico is a React TV Show streaming project `(Ongoing)` [LIVE](https://dizico.netlify.app/)
 
 ## Development
 ### `git clone https://github.com/comertcimen/dizico.git`
